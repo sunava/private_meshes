@@ -70,7 +70,7 @@
    "title": "Material Handling",
    "blurb": "Pallet trucks, tipping skips and other equipment for moving loads around a warehouse.",
    "added": "2026-10-19",
-   "count": 3
+   "count": 4
   },
   {
    "key": "ladders-steps",
@@ -16614,6 +16614,53 @@
    },
    "variant_of": null,
    "folder": "storage-shelving/157-mobile_tray_rack"
+  },
+  {
+   "slug": "palletised_carton_load",
+   "name": "Palletised Carton Load",
+   "desc": "Flat 1200 x 800 block pallet carrying three layers of taped 600 x 400 cartons, as stored in pallet racking.",
+   "size": [
+    0.8,
+    1.2,
+    1.043
+   ],
+   "joints": [],
+   "frames": [
+    {
+     "name": "palletised_carton_load_load_top_surface",
+     "link": "palletised_carton_load_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "palletised_carton_load_stack_anchor",
+     "link": "palletised_carton_load_body",
+     "purpose": "wall_mount"
+    },
+    {
+     "name": "palletised_carton_load_front_fork_pocket_grip",
+     "link": "palletised_carton_load_body",
+     "purpose": "grasp"
+    },
+    {
+     "name": "palletised_carton_load_back_fork_pocket_grip",
+     "link": "palletised_carton_load_body",
+     "purpose": "grasp"
+    }
+   ],
+   "id": "163",
+   "category": "material-handling",
+   "added": "2026-10-22",
+   "fingerprint": {
+    "type": "palletised carton load",
+    "joints": {},
+    "size_m": [
+     0.8,
+     1.2,
+     1.043
+    ]
+   },
+   "variant_of": null,
+   "folder": "material-handling/163-palletised_carton_load"
   }
  ]
 }

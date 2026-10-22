@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot name="palletised_carton_load">
+  <link name="palletised_carton_load_body">
+    <inertial>
+      <origin xyz="0 0 0.522" rpy="0 0 0" />
+      <mass value="121" />
+      <inertia ixx="25.5102" ixy="0" ixz="0" iyy="17.4435" iyz="0" izz="20.9733" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/palletised_carton_load_body.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 1.2 0.144" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0.594" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 1.2 0.9" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="palletised_carton_load_load_top_surface" />
+  <joint name="palletised_carton_load_load_top_surface_fixed" type="fixed">
+    <parent link="palletised_carton_load_body" />
+    <child link="palletised_carton_load_load_top_surface" />
+    <origin xyz="0 0 1.044" rpy="0 0 0" />
+  </joint>
+  <link name="palletised_carton_load_stack_anchor" />
+  <joint name="palletised_carton_load_stack_anchor_fixed" type="fixed">
+    <parent link="palletised_carton_load_body" />
+    <child link="palletised_carton_load_stack_anchor" />
+    <origin xyz="0 0 1.044" rpy="0 0 0" />
+  </joint>
+  <link name="palletised_carton_load_front_fork_pocket_grip" />
+  <joint name="palletised_carton_load_front_fork_pocket_grip_fixed" type="fixed">
+    <parent link="palletised_carton_load_body" />
+    <child link="palletised_carton_load_front_fork_pocket_grip" />
+    <origin xyz="0 -0.6 0.061" rpy="0 0 0" />
+  </joint>
+  <link name="palletised_carton_load_back_fork_pocket_grip" />
+  <joint name="palletised_carton_load_back_fork_pocket_grip_fixed" type="fixed">
+    <parent link="palletised_carton_load_body" />
+    <child link="palletised_carton_load_back_fork_pocket_grip" />
+    <origin xyz="0 0.6 0.061" rpy="0 0 0" />
+  </joint>
+</robot>
