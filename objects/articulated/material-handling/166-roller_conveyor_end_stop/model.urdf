@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot name="roller_conveyor_end_stop">
+  <link name="roller_conveyor_end_stop_body">
+    <inertial>
+      <origin xyz="-0.035 -0.0203326 0.893673" rpy="0 0 0" />
+      <mass value="55" />
+      <inertia ixx="22.056" ixy="0" ixz="0" iyy="0.428154" iyz="0.0526116" izz="22.4656" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/roller_conveyor_end_stop_body.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.035 -1.07125 0.93" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.012 0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.035 0.006 0.89" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 2.1425 0.02" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.175 0.006 0.925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 2.1425 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.105 0.006 0.925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 2.1425 0.03" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="roller_conveyor_end_stop_pick_surface" />
+  <joint name="roller_conveyor_end_stop_pick_surface_fixed" type="fixed">
+    <parent link="roller_conveyor_end_stop_body" />
+    <child link="roller_conveyor_end_stop_pick_surface" />
+    <origin xyz="-0.035 -0.83525 0.9" rpy="0 0 0" />
+  </joint>
+  <link name="roller_conveyor_end_stop_transfer_end_surface" />
+  <joint name="roller_conveyor_end_stop_transfer_end_surface_fixed" type="fixed">
+    <parent link="roller_conveyor_end_stop_body" />
+    <child link="roller_conveyor_end_stop_transfer_end_surface" />
+    <origin xyz="-0.035 0.87725 0.9" rpy="0 0 0" />
+  </joint>
+  <link name="roller_conveyor_end_stop_floor_anchor" />
+  <joint name="roller_conveyor_end_stop_floor_anchor_fixed" type="fixed">
+    <parent link="roller_conveyor_end_stop_body" />
+    <child link="roller_conveyor_end_stop_floor_anchor" />
+    <origin xyz="-0.035 -1.00525 0" rpy="0 0 0" />
+  </joint>
+</robot>

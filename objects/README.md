@@ -5,7 +5,7 @@ including its meshes, documentation and notices.
 
 | Collection | Contents | Entry point |
 | --- | --- | --- |
-| [Articulated objects](articulated/README.md) | 160 furniture, appliance, workshop and storage models, grouped into 12 categories | `<category>/<id>-<slug>/model.urdf` or `model.blend` |
+| [Articulated objects](articulated/README.md) | 161 furniture, appliance, workshop and storage models, grouped into 12 categories | `<category>/<id>-<slug>/model.urdf` or `model.blend` |
 | [Laboratory devices](laboratory/README.md) | Centrifuge, dual dispenser, refrigerator, scale and tube rack | `<device>/model.urdf` |
 
 The [web catalogue](https://sunava.github.io/private_meshes/) covers both

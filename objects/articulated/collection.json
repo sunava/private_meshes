@@ -70,7 +70,7 @@
    "title": "Material Handling",
    "blurb": "Pallet trucks, tipping skips and other equipment for moving loads around a warehouse.",
    "added": "2026-10-19",
-   "count": 4
+   "count": 5
   },
   {
    "key": "ladders-steps",
@@ -16773,6 +16773,48 @@
    },
    "variant_of": null,
    "folder": "robot-cell-equipment/165-overhead_robot_portal"
+  },
+  {
+   "slug": "roller_conveyor_end_stop",
+   "name": "Roller Conveyor with End Stop",
+   "desc": "Straight roller conveyor at bench height on aluminium-profile legs, with side guides, an end stop and a photo-eye at the pick end and a side-mounted drive box.",
+   "size": [
+    0.45,
+    2.154,
+    0.977
+   ],
+   "joints": [],
+   "frames": [
+    {
+     "name": "roller_conveyor_end_stop_pick_surface",
+     "link": "roller_conveyor_end_stop_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "roller_conveyor_end_stop_transfer_end_surface",
+     "link": "roller_conveyor_end_stop_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "roller_conveyor_end_stop_floor_anchor",
+     "link": "roller_conveyor_end_stop_body",
+     "purpose": "wall_mount"
+    }
+   ],
+   "id": "166",
+   "category": "material-handling",
+   "added": "2026-10-30",
+   "fingerprint": {
+    "type": "roller conveyor",
+    "joints": {},
+    "size_m": [
+     0.45,
+     2.154,
+     0.977
+    ]
+   },
+   "variant_of": null,
+   "folder": "material-handling/166-roller_conveyor_end_stop"
   }
  ]
 }
