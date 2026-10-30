@@ -94,7 +94,7 @@
    "title": "Robot Cell Equipment",
    "blurb": "Robot portals, grippers, AMR top modules and process stations that automated cells are built from.",
    "added": "2026-10-30",
-   "count": 2
+   "count": 3
   }
  ],
  "objects": [
@@ -16862,6 +16862,60 @@
    },
    "variant_of": null,
    "folder": "material-handling/167-tote_buffer_table"
+  },
+  {
+   "slug": "parallel_tote_gripper",
+   "name": "Parallel Gripper with Tote Fingers",
+   "desc": "Electric two-finger parallel gripper with long flat fingers and rubber pads that pinch a tote's rail from above; each finger closes 41.5 mm.",
+   "size": [
+    0.123,
+    0.075,
+    0.172
+   ],
+   "joints": [
+    {
+     "name": "parallel_tote_gripper_right_finger_joint",
+     "type": "prismatic",
+     "lower": 0.0,
+     "upper": 0.0415,
+     "inspect": 0.0332
+    },
+    {
+     "name": "parallel_tote_gripper_left_finger_joint",
+     "type": "prismatic",
+     "lower": 0.0,
+     "upper": 0.0415,
+     "inspect": 0.0332
+    }
+   ],
+   "frames": [
+    {
+     "name": "parallel_tote_gripper_flange_mount",
+     "link": "parallel_tote_gripper_body",
+     "purpose": "tool_attachment"
+    },
+    {
+     "name": "parallel_tote_gripper_pad_centre",
+     "link": "parallel_tote_gripper_body",
+     "purpose": "grasp"
+    }
+   ],
+   "id": "168",
+   "category": "robot-cell-equipment",
+   "added": "2026-10-30",
+   "fingerprint": {
+    "type": "parallel gripper",
+    "joints": {
+     "prismatic": 2
+    },
+    "size_m": [
+     0.123,
+     0.075,
+     0.172
+    ]
+   },
+   "variant_of": null,
+   "folder": "robot-cell-equipment/168-parallel_tote_gripper"
   }
  ]
 }

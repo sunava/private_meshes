@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<robot name="parallel_tote_gripper">
+  <link name="parallel_tote_gripper_body">
+    <inertial>
+      <origin xyz="0 0 0.061" rpy="0 0 0" />
+      <mass value="0.82" />
+      <inertia ixx="0.00127975" ixy="0" ixz="0" iyy="0.00159545" iyz="0" izz="0.000841047" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/parallel_tote_gripper_body.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.062 0.122" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="parallel_tote_gripper_right_finger">
+    <inertial>
+      <origin xyz="0.0493571 0 0.148607" rpy="0 0 0" />
+      <mass value="0.04" />
+      <inertia ixx="1.36691e-05" ixy="0" ixz="3.44388e-07" iyy="8.82634e-06" iyz="0" izz="5.6068e-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/parallel_tote_gripper_right_finger.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.05 0 0.147" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.04 0.05" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.044 0 0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.036 0.02" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="parallel_tote_gripper_left_finger">
+    <inertial>
+      <origin xyz="-0.0493571 0 0.148607" rpy="0 0 0" />
+      <mass value="0.04" />
+      <inertia ixx="1.36691e-05" ixy="0" ixz="-3.44388e-07" iyy="8.82634e-06" iyz="0" izz="5.6068e-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/parallel_tote_gripper_left_finger.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.05 0 0.147" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.04 0.05" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.044 0 0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.036 0.02" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="parallel_tote_gripper_right_finger_joint" type="prismatic">
+    <parent link="parallel_tote_gripper_body" />
+    <child link="parallel_tote_gripper_right_finger" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="-1 0 0" />
+    <limit lower="0" upper="0.0415" effort="50.0" velocity="1.0" />
+  </joint>
+  <joint name="parallel_tote_gripper_left_finger_joint" type="prismatic">
+    <parent link="parallel_tote_gripper_body" />
+    <child link="parallel_tote_gripper_left_finger" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="0.0415" effort="50.0" velocity="1.0" />
+  </joint>
+  <link name="parallel_tote_gripper_flange_mount" />
+  <joint name="parallel_tote_gripper_flange_mount_fixed" type="fixed">
+    <parent link="parallel_tote_gripper_body" />
+    <child link="parallel_tote_gripper_flange_mount" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="parallel_tote_gripper_pad_centre" />
+  <joint name="parallel_tote_gripper_pad_centre_fixed" type="fixed">
+    <parent link="parallel_tote_gripper_body" />
+    <child link="parallel_tote_gripper_pad_centre" />
+    <origin xyz="0 0 0.162" rpy="0 0 0" />
+  </joint>
+</robot>

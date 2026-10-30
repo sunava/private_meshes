@@ -18,7 +18,7 @@ These are original concept models in common product typologies, not replicas of 
 | <img src="./material-handling/144-hand_pallet_truck/renders/rest.webp" width="120"> | **[Material Handling](./material-handling/)** | Pallet trucks, tipping skips and other equipment for moving loads around a warehouse. | 6 |
 | <img src="./ladders-steps/146-mobile_platform_steps/renders/rest.webp" width="120"> | **[Ladders & Steps](./ladders-steps/)** | Mobile platform steps for reaching upper shelf levels safely. | 1 |
 | <img src="./hazardous-storage/147-fire_safety_cabinet/renders/rest.webp" width="120"> | **[Hazardous Materials Storage](./hazardous-storage/)** | Safety and chemical cabinets, sump pallets and depots for flammable or polluting substances. | 4 |
-| <img src="./robot-cell-equipment/164-uvc_tote_chamber/renders/rest.webp" width="120"> | **[Robot Cell Equipment](./robot-cell-equipment/)** | Robot portals, grippers, AMR top modules and process stations that automated cells are built from. | 2 |
+| <img src="./robot-cell-equipment/164-uvc_tote_chamber/renders/rest.webp" width="120"> | **[Robot Cell Equipment](./robot-cell-equipment/)** | Robot portals, grippers, AMR top modules and process stations that automated cells are built from. | 3 |
 
 ## Layout
 
