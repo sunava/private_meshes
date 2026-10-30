@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<robot name="amr_two_tote_top_module">
+  <link name="amr_two_tote_top_module_body">
+    <inertial>
+      <origin xyz="-0.0001 -0.0784822 0.302704" rpy="0 0 0" />
+      <mass value="26" />
+      <inertia ixx="1.85316" ixy="0" ixz="0" iyy="1.45676" iyz="-0.0122673" izz="1.6767" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/amr_two_tote_top_module_body.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0001 -0.08025 0.274" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.68 0.548" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0001 -0.3505 0.588" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.1395 0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0001 0.15 0.588" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.2195 0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.2519 -0.12025 0.588" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.321 0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.2521 -0.12025 0.588" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.321 0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0001 -0.12025 0.588" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.321 0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0001 -0.29225 0.713" rpy="0 0 0" />
+      <geometry>
+        <box size="0.496 0.005 0.17" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0001 0.05175 0.713" rpy="0 0 0" />
+      <geometry>
+        <box size="0.496 0.005 0.17" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.2454 -0.12025 0.713" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.349 0.17" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.2456 -0.12025 0.713" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.349 0.17" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="amr_two_tote_top_module_cover">
+    <inertial>
+      <origin xyz="-0.0001 -0.12025 0.802" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.0203062" ixy="0" ixz="0" iyy="0.0410087" iyz="0" izz="0.0613028" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/amr_two_tote_top_module_cover.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0001 -0.12025 0.802" rpy="0 0 0" />
+      <geometry>
+        <box size="0.496 0.349 0.006" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="amr_two_tote_top_module_cover_joint" type="prismatic">
+    <parent link="amr_two_tote_top_module_body" />
+    <child link="amr_two_tote_top_module_cover" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.369" effort="50.0" velocity="1.0" />
+  </joint>
+  <link name="amr_two_tote_top_module_tote_pocket_a" />
+  <joint name="amr_two_tote_top_module_tote_pocket_a_fixed" type="fixed">
+    <parent link="amr_two_tote_top_module_body" />
+    <child link="amr_two_tote_top_module_tote_pocket_a" />
+    <origin xyz="0.1249 -0.12025 0.548" rpy="0 0 0" />
+  </joint>
+  <link name="amr_two_tote_top_module_tote_pocket_b" />
+  <joint name="amr_two_tote_top_module_tote_pocket_b_fixed" type="fixed">
+    <parent link="amr_two_tote_top_module_body" />
+    <child link="amr_two_tote_top_module_tote_pocket_b" />
+    <origin xyz="-0.1251 -0.12025 0.548" rpy="0 0 0" />
+  </joint>
+  <link name="amr_two_tote_top_module_cover_grip" />
+  <joint name="amr_two_tote_top_module_cover_grip_fixed" type="fixed">
+    <parent link="amr_two_tote_top_module_cover" />
+    <child link="amr_two_tote_top_module_cover_grip" />
+    <origin xyz="-0.0001 -0.28275 0.809" rpy="0 0 0" />
+  </joint>
+  <link name="amr_two_tote_top_module_chassis_mount" />
+  <joint name="amr_two_tote_top_module_chassis_mount_fixed" type="fixed">
+    <parent link="amr_two_tote_top_module_body" />
+    <child link="amr_two_tote_top_module_chassis_mount" />
+    <origin xyz="-0.0001 -0.08025 0" rpy="0 0 0" />
+  </joint>
+</robot>

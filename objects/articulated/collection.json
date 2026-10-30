@@ -94,7 +94,7 @@
    "title": "Robot Cell Equipment",
    "blurb": "Robot portals, grippers, AMR top modules and process stations that automated cells are built from.",
    "added": "2026-10-30",
-   "count": 3
+   "count": 4
   }
  ],
  "objects": [
@@ -16916,6 +16916,63 @@
    },
    "variant_of": null,
    "folder": "robot-cell-equipment/168-parallel_tote_gripper"
+  },
+  {
+   "slug": "amr_two_tote_top_module",
+   "name": "AMR Top Module, Two Totes",
+   "desc": "Cabinet for the deck of a mobile robot with two tote pockets under a fixed shroud and a flat cover that slides back to open, plus a light bar and a rear tablet.",
+   "size": [
+    0.542,
+    0.847,
+    0.813
+   ],
+   "joints": [
+    {
+     "name": "amr_two_tote_top_module_cover_joint",
+     "type": "prismatic",
+     "lower": 0.0,
+     "upper": 0.369,
+     "inspect": 0.369
+    }
+   ],
+   "frames": [
+    {
+     "name": "amr_two_tote_top_module_tote_pocket_a",
+     "link": "amr_two_tote_top_module_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "amr_two_tote_top_module_tote_pocket_b",
+     "link": "amr_two_tote_top_module_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "amr_two_tote_top_module_cover_grip",
+     "link": "amr_two_tote_top_module_cover",
+     "purpose": "grasp"
+    },
+    {
+     "name": "amr_two_tote_top_module_chassis_mount",
+     "link": "amr_two_tote_top_module_body",
+     "purpose": "wall_mount"
+    }
+   ],
+   "id": "169",
+   "category": "robot-cell-equipment",
+   "added": "2026-10-30",
+   "fingerprint": {
+    "type": "amr top module",
+    "joints": {
+     "prismatic": 1
+    },
+    "size_m": [
+     0.542,
+     0.847,
+     0.813
+    ]
+   },
+   "variant_of": null,
+   "folder": "robot-cell-equipment/169-amr_two_tote_top_module"
   }
  ]
 }
