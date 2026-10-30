@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<robot name="tote_buffer_table">
+  <link name="tote_buffer_table_body">
+    <inertial>
+      <origin xyz="0 0 0.644301" rpy="0 0 0" />
+      <mass value="32" />
+      <inertia ixx="3.7862" ixy="0" ixz="0" iyy="5.34973" iyz="0" izz="3.09316" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/tote_buffer_table_body.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.5 0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.44 0.02" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.38 0.21 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.86" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.38 0.21 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.86" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.38 -0.21 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.86" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.38 -0.21 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.86" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.3105 0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.3405 0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0495 0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0195 0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.3105 -0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.3405 -0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0495 -0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0195 -0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0495 0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0195 0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.3105 0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.3405 0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0495 -0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0195 -0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.3105 -0.109 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.035" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.3405 -0.079 0.9175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.072 0.035" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="tote_buffer_table_left_nest_seat" />
+  <joint name="tote_buffer_table_left_nest_seat_fixed" type="fixed">
+    <parent link="tote_buffer_table_body" />
+    <child link="tote_buffer_table_left_nest_seat" />
+    <origin xyz="-0.18 0 0.9" rpy="0 0 0" />
+  </joint>
+  <link name="tote_buffer_table_right_nest_seat" />
+  <joint name="tote_buffer_table_right_nest_seat_fixed" type="fixed">
+    <parent link="tote_buffer_table_body" />
+    <child link="tote_buffer_table_right_nest_seat" />
+    <origin xyz="0.18 0 0.9" rpy="0 0 0" />
+  </joint>
+  <link name="tote_buffer_table_shelf_surface" />
+  <joint name="tote_buffer_table_shelf_surface_fixed" type="fixed">
+    <parent link="tote_buffer_table_body" />
+    <child link="tote_buffer_table_shelf_surface" />
+    <origin xyz="0 0 0.23" rpy="0 0 0" />
+  </joint>
+  <link name="tote_buffer_table_wall_anchor" />
+  <joint name="tote_buffer_table_wall_anchor_fixed" type="fixed">
+    <parent link="tote_buffer_table_body" />
+    <child link="tote_buffer_table_wall_anchor" />
+    <origin xyz="0 0.25 0.88" rpy="0 0 0" />
+  </joint>
+</robot>

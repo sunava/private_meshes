@@ -70,7 +70,7 @@
    "title": "Material Handling",
    "blurb": "Pallet trucks, tipping skips and other equipment for moving loads around a warehouse.",
    "added": "2026-10-19",
-   "count": 5
+   "count": 6
   },
   {
    "key": "ladders-steps",
@@ -16815,6 +16815,53 @@
    },
    "variant_of": null,
    "folder": "material-handling/166-roller_conveyor_end_stop"
+  },
+  {
+   "slug": "tote_buffer_table",
+   "name": "Tote Buffer Table, Two Nests",
+   "desc": "Stainless table with two tote nests side by side, each framed by four L-shaped corner guides and watched by a presence sensor.",
+   "size": [
+    0.84,
+    0.5,
+    0.936
+   ],
+   "joints": [],
+   "frames": [
+    {
+     "name": "tote_buffer_table_left_nest_seat",
+     "link": "tote_buffer_table_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "tote_buffer_table_right_nest_seat",
+     "link": "tote_buffer_table_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "tote_buffer_table_shelf_surface",
+     "link": "tote_buffer_table_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "tote_buffer_table_wall_anchor",
+     "link": "tote_buffer_table_body",
+     "purpose": "wall_mount"
+    }
+   ],
+   "id": "167",
+   "category": "material-handling",
+   "added": "2026-10-30",
+   "fingerprint": {
+    "type": "tote buffer table",
+    "joints": {},
+    "size_m": [
+     0.84,
+     0.5,
+     0.936
+    ]
+   },
+   "variant_of": null,
+   "folder": "material-handling/167-tote_buffer_table"
   }
  ]
 }
