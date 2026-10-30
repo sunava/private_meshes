@@ -10,7 +10,7 @@ in [NOTICE.md](NOTICE.md). Objects #001–#150 retain their pending licence stat
 
 ```text
 objects/                         independently loadable models
-  articulated/                   158 models, organised by category
+  articulated/                   159 models, organised by category
     collection.json              web-catalogue metadata
     <category>/<id>-<slug>/       Blender, URDF, meshes, previews and notices
   laboratory/                    five portable laboratory devices, articulated and rigid

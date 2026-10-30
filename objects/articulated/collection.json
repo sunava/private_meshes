@@ -87,6 +87,14 @@
    "blurb": "Safety and chemical cabinets, sump pallets and depots for flammable or polluting substances.",
    "added": "2026-10-19",
    "count": 4
+  },
+  {
+   "key": "robot-cell-equipment",
+   "code": "RC",
+   "title": "Robot Cell Equipment",
+   "blurb": "Robot portals, grippers, AMR top modules and process stations that automated cells are built from.",
+   "added": "2026-10-30",
+   "count": 1
   }
  ],
  "objects": [
@@ -16661,6 +16669,68 @@
    },
    "variant_of": null,
    "folder": "material-handling/163-palletised_carton_load"
+  },
+  {
+   "slug": "uvc_tote_chamber",
+   "name": "UV-C Tote Chamber with Sliding Lid",
+   "desc": "Top-loading UV-C chamber for one robot tote: a quartz shelf with corner guides, lamps below, beside and in the lid, and a lid that slides sideways onto two posts.",
+   "size": [
+    1.13,
+    0.64,
+    1.195
+   ],
+   "joints": [
+    {
+     "name": "uvc_tote_chamber_lid_joint",
+     "type": "prismatic",
+     "lower": 0.0,
+     "upper": 0.5,
+     "inspect": 0.5
+    }
+   ],
+   "frames": [
+    {
+     "name": "uvc_tote_chamber_tote_seat",
+     "link": "uvc_tote_chamber_body",
+     "purpose": "place_surface"
+    },
+    {
+     "name": "uvc_tote_chamber_chamber_volume",
+     "link": "uvc_tote_chamber_body",
+     "purpose": "container_volume"
+    },
+    {
+     "name": "uvc_tote_chamber_lid_grip",
+     "link": "uvc_tote_chamber_lid",
+     "purpose": "grasp"
+    },
+    {
+     "name": "uvc_tote_chamber_lid_closed_sensor",
+     "link": "uvc_tote_chamber_body",
+     "purpose": "control"
+    },
+    {
+     "name": "uvc_tote_chamber_wall_anchor",
+     "link": "uvc_tote_chamber_body",
+     "purpose": "wall_mount"
+    }
+   ],
+   "id": "164",
+   "category": "robot-cell-equipment",
+   "added": "2026-10-30",
+   "fingerprint": {
+    "type": "uv-c tote chamber",
+    "joints": {
+     "prismatic": 1
+    },
+    "size_m": [
+     1.13,
+     0.64,
+     1.195
+    ]
+   },
+   "variant_of": null,
+   "folder": "robot-cell-equipment/164-uvc_tote_chamber"
   }
  ]
 }

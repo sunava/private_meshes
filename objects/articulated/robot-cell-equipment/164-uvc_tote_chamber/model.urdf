@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<robot name="uvc_tote_chamber">
+  <link name="uvc_tote_chamber_body">
+    <inertial>
+      <origin xyz="-0.24938 0 0.404256" rpy="0 0 0" />
+      <mass value="60" />
+      <inertia ixx="6.44131" ixy="0" ixz="-0.0992414" iyy="6.58815" iyz="0" izz="4.44361" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/uvc_tote_chamber_body.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.26 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.62 0.62" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.5275 0 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.62 0.52" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0075 0 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.62 0.52" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.26 -0.295 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.03 0.52" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.26 0.295 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.03 0.52" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.26 0 0.767" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.56 0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.369 -0.1405 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.052 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.349 -0.1605 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.012 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.369 0.1405 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.052 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.349 0.1605 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.012 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.151 -0.1405 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.052 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.171 -0.1605 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.012 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.151 0.1405 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.052 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.171 0.1605 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.012 0.03" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.535 -0.295 0.56" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 1.12" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.535 0.295 0.56" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 1.12" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="uvc_tote_chamber_lid">
+    <inertial>
+      <origin xyz="-0.26 0 1.16039" rpy="0 0 0" />
+      <mass value="9" />
+      <inertia ixx="0.37032" ixy="0" ixz="0" iyy="0.324468" iyz="0" izz="0.689869" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/uvc_tote_chamber_lid.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.26 0 1.1715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.62 0.019" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.5225 0 1.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.62 0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0025 0 1.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.62 0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.26 -0.29 1.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.04 0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.26 0.29 1.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.04 0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="uvc_tote_chamber_lid_joint" type="prismatic">
+    <parent link="uvc_tote_chamber_body" />
+    <child link="uvc_tote_chamber_lid" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="0.5" effort="50.0" velocity="1.0" />
+  </joint>
+  <link name="uvc_tote_chamber_tote_seat" />
+  <joint name="uvc_tote_chamber_tote_seat_fixed" type="fixed">
+    <parent link="uvc_tote_chamber_body" />
+    <child link="uvc_tote_chamber_tote_seat" />
+    <origin xyz="-0.26 0 0.78" rpy="0 0 0" />
+  </joint>
+  <link name="uvc_tote_chamber_chamber_volume" />
+  <joint name="uvc_tote_chamber_chamber_volume_fixed" type="fixed">
+    <parent link="uvc_tote_chamber_body" />
+    <child link="uvc_tote_chamber_chamber_volume" />
+    <origin xyz="-0.26 0 0.95" rpy="0 0 0" />
+  </joint>
+  <link name="uvc_tote_chamber_lid_grip" />
+  <joint name="uvc_tote_chamber_lid_grip_fixed" type="fixed">
+    <parent link="uvc_tote_chamber_lid" />
+    <child link="uvc_tote_chamber_lid_grip" />
+    <origin xyz="-0.005 0 1.188" rpy="0 0 0" />
+  </joint>
+  <link name="uvc_tote_chamber_lid_closed_sensor" />
+  <joint name="uvc_tote_chamber_lid_closed_sensor_fixed" type="fixed">
+    <parent link="uvc_tote_chamber_body" />
+    <child link="uvc_tote_chamber_lid_closed_sensor" />
+    <origin xyz="-0.555 -0.27 1.09" rpy="0 0 0" />
+  </joint>
+  <link name="uvc_tote_chamber_wall_anchor" />
+  <joint name="uvc_tote_chamber_wall_anchor_fixed" type="fixed">
+    <parent link="uvc_tote_chamber_body" />
+    <child link="uvc_tote_chamber_wall_anchor" />
+    <origin xyz="-0.26 0.31 1.02" rpy="0 0 0" />
+  </joint>
+</robot>
