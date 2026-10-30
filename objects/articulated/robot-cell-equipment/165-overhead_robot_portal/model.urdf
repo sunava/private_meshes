@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot name="overhead_robot_portal">
+  <link name="overhead_robot_portal_body">
+    <inertial>
+      <origin xyz="0 0 1.85969" rpy="0 0 0" />
+      <mass value="240" />
+      <inertia ixx="117.573" ixy="0" ixz="0" iyy="676.395" iyz="0" izz="559.667" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707963 0 0" />
+      <geometry>
+        <mesh filename="assets/overhead_robot_portal_body.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-1.95 0 1.1925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 2.385" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="1.95 0 1.1925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 2.385" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 2.305" rpy="0 0 0" />
+      <geometry>
+        <box size="4.02 0.16 0.16" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="overhead_robot_portal_robot_mount" />
+  <joint name="overhead_robot_portal_robot_mount_fixed" type="fixed">
+    <parent link="overhead_robot_portal_body" />
+    <child link="overhead_robot_portal_robot_mount" />
+    <origin xyz="0 0 2.2" rpy="0 0 0" />
+  </joint>
+  <link name="overhead_robot_portal_left_floor_anchor" />
+  <joint name="overhead_robot_portal_left_floor_anchor_fixed" type="fixed">
+    <parent link="overhead_robot_portal_body" />
+    <child link="overhead_robot_portal_left_floor_anchor" />
+    <origin xyz="-1.95 0 0.02" rpy="0 0 0" />
+  </joint>
+  <link name="overhead_robot_portal_right_floor_anchor" />
+  <joint name="overhead_robot_portal_right_floor_anchor_fixed" type="fixed">
+    <parent link="overhead_robot_portal_body" />
+    <child link="overhead_robot_portal_right_floor_anchor" />
+    <origin xyz="1.95 0 0.02" rpy="0 0 0" />
+  </joint>
+</robot>

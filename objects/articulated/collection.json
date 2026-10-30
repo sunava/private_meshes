@@ -94,7 +94,7 @@
    "title": "Robot Cell Equipment",
    "blurb": "Robot portals, grippers, AMR top modules and process stations that automated cells are built from.",
    "added": "2026-10-30",
-   "count": 1
+   "count": 2
   }
  ],
  "objects": [
@@ -16731,6 +16731,48 @@
    },
    "variant_of": null,
    "folder": "robot-cell-equipment/164-uvc_tote_chamber"
+  },
+  {
+   "slug": "overhead_robot_portal",
+   "name": "Overhead Robot Portal",
+   "desc": "Free-standing steel portal of two columns and a box-section beam with knee braces, a robot interface plate under the beam centre and a cable tray to one column.",
+   "size": [
+    4.2,
+    0.3,
+    2.445
+   ],
+   "joints": [],
+   "frames": [
+    {
+     "name": "overhead_robot_portal_robot_mount",
+     "link": "overhead_robot_portal_body",
+     "purpose": "tool_attachment"
+    },
+    {
+     "name": "overhead_robot_portal_left_floor_anchor",
+     "link": "overhead_robot_portal_body",
+     "purpose": "wall_mount"
+    },
+    {
+     "name": "overhead_robot_portal_right_floor_anchor",
+     "link": "overhead_robot_portal_body",
+     "purpose": "wall_mount"
+    }
+   ],
+   "id": "165",
+   "category": "robot-cell-equipment",
+   "added": "2026-10-30",
+   "fingerprint": {
+    "type": "overhead robot portal",
+    "joints": {},
+    "size_m": [
+     4.2,
+     0.3,
+     2.445
+    ]
+   },
+   "variant_of": null,
+   "folder": "robot-cell-equipment/165-overhead_robot_portal"
   }
  ]
 }
